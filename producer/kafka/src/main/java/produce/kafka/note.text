@@ -1,0 +1,16 @@
+for starting zookeeper
+bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+for starting kafka server
+bin\windows\kafka-server-start.bat config\server.properties
+
+create an topic
+bin\windows\kafka-topics.bat --create --topic rahul --bootstrap-server localhost:9092
+
+produce topic
+bin\windows\kafka-console-producer.bat --topic ram --bootstrap-server localhost:9092
+
+read topic
+C:\kafka1>bin\windows\kafka-console-consumer.bat --topic ram  --from-beginning --bootstrap-server localhost:9092
+
+
